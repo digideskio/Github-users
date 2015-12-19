@@ -66,24 +66,30 @@ class Loader<T: EKManagedObjectModel> {
                 return
             }
             
-            self.context.performBlock {
-                let mapping = T.objectMapping()
-                let fetchRequest = NSFetchRequest(entityName: mapping.entityName)
-                
-                EKManagedObjectMapper.syncArrayOfObjectsFromExternalRepresentation(
-                    resultArray,
-                    withMapping: mapping,
-                    fetchRequest: fetchRequest,
-                    inManagedObjectContext: self.context
-                )
-                
-                do {
-                    try self.context.save()
-                    completion?(error: nil)
-                }
-                catch {
-                    completion?(error: ResponseError.ResponseErrorContextSave)
-                }
+            self.updateContextWithObjects(resultArray, completion: completion)
+        }
+    }
+    
+    // MARK: - Private 
+    
+    private func updateContextWithObjects(objects: [AnyObject], completion: LoaderCompletionHandler?) {
+        context.performBlock {
+            let mapping = T.objectMapping()
+            let fetchRequest = NSFetchRequest(entityName: mapping.entityName)
+            
+            EKManagedObjectMapper.syncArrayOfObjectsFromExternalRepresentation(
+                objects,
+                withMapping: mapping,
+                fetchRequest: fetchRequest,
+                inManagedObjectContext: self.context
+            )
+            
+            do {
+                try self.context.save()
+                completion?(error: nil)
+            }
+            catch {
+                completion?(error: ResponseError.ResponseErrorContextSave)
             }
         }
     }
