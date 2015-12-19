@@ -36,6 +36,11 @@ class FRCDataSource: NSObject {
         fetch()
     }
     
+    // MARK: - Public
+    
+    func objectAtIndexPath(indexPath: NSIndexPath) -> NSManagedObject {
+        return self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
+    }
     
     // MARK: - Private
     
