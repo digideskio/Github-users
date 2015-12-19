@@ -27,14 +27,11 @@ class MainViewController: UIViewController {
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
-        Loader<User>.load(
-            page: 0,
-            count: 100, 
-            context: coreDataStack.newBackgroundWorkerMOC()
-            ) { [weak self] error in
+        let loader = Loader<User>(context: coreDataStack.newBackgroundWorkerMOC())
+        loader.load(page: 0, count: 100) { error in
             if error != nil {
                 let alert = UIAlertController(title: "Error", message: error!.message(), preferredStyle: .Alert)
-                self?.presentViewController(alert, animated: true, completion: nil)
+                self.presentViewController(alert, animated: true, completion: nil)
             }
         }
 

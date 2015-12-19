@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Haneke
 
 class UserTableViewCell: BaseTableViewCell {
     @IBOutlet weak var userNameLabel: UILabel!
@@ -22,5 +23,12 @@ class UserTableViewCell: BaseTableViewCell {
         userNameLabel.text = model.login
         userURLLabel.text = model.htmlURL
         
+        if let avatarURL = model.avatarURL, imageURL = NSURL(string: avatarURL) {
+            userAvatarImageView.hnk_setImageFromURL(imageURL)
+        }
+    }
+    
+    override func prepareForReuse() {
+        userAvatarImageView.image = nil
     }
 }

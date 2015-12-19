@@ -10,3 +10,4 @@ use_frameworks!
 pod 'BNRCoreDataStack'
 pod 'EasyMapping'
 pod 'Alamofire'
+pod 'HanekeSwift'

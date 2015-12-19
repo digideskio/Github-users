@@ -33,9 +33,19 @@ class Loader<T: EKManagedObjectModel> {
     
     typealias LoaderCompletionHandler = (error: ResponseError?) -> ()
     
+    // MARK: - Variables
+    
+    let context: NSManagedObjectContext
+    
+    // MARK: - Init
+    
+    init(context: NSManagedObjectContext) {
+        self.context = context
+    }
+    
     // MARK: - Public
     
-    class func load(page page: Int, count: Int, context: NSManagedObjectContext, completion: LoaderCompletionHandler?) {
+    func load(page page: Int, count: Int, completion: LoaderCompletionHandler?) {
         guard let endPoint = GithubRouter.endPoint(T) else {
             NSException(name:NSInternalInconsistencyException, reason:"Cannot find endpoint for model!", userInfo:nil).raise()
             return
@@ -56,7 +66,7 @@ class Loader<T: EKManagedObjectModel> {
                 return
             }
             
-            context.performBlock {
+            self.context.performBlock {
                 let mapping = T.objectMapping()
                 let fetchRequest = NSFetchRequest(entityName: mapping.entityName)
                 
@@ -64,11 +74,12 @@ class Loader<T: EKManagedObjectModel> {
                     resultArray,
                     withMapping: mapping,
                     fetchRequest: fetchRequest,
-                    inManagedObjectContext: context
+                    inManagedObjectContext: self.context
                 )
                 
                 do {
-                    try context.save()
+                    try self.context.save()
+                    completion?(error: nil)
                 }
                 catch {
                     completion?(error: ResponseError.ResponseErrorContextSave)
