@@ -7,13 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45E7E6E06CFFD863CF63C72B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E05A75AF88931542A4AEBF /* Pods.framework */; };
+		71519CAD1C25570A006C9658 /* Github_swivl.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 71519CAB1C25570A006C9658 /* Github_swivl.xcdatamodeld */; };
+		71519CB01C255711006C9658 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71519CAF1C255711006C9658 /* MainViewController.swift */; };
+		71519CB31C25573D006C9658 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71519CB21C25573D006C9658 /* Assets.xcassets */; };
+		71747E351C255D5100C816AD /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71747E331C255D5100C816AD /* User+CoreDataProperties.swift */; };
+		71747E361C255D5100C816AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71747E341C255D5100C816AD /* User.swift */; };
+		71747E3A1C2569E500C816AD /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71747E391C2569E500C816AD /* UserTableViewCell.swift */; };
+		71747E3C1C256A1100C816AD /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71747E3B1C256A1100C816AD /* BaseTableViewCell.swift */; };
+		71747E3F1C256CB400C816AD /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71747E3E1C256CB400C816AD /* Loader.swift */; };
+		71747E431C25710500C816AD /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71747E421C25710500C816AD /* RequestManager.swift */; };
 		71810BF61C1F45AF00271DDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71810BF51C1F45AF00271DDC /* AppDelegate.swift */; };
-		71810BF81C1F45AF00271DDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71810BF71C1F45AF00271DDC /* ViewController.swift */; };
 		71810BFB1C1F45AF00271DDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71810BF91C1F45AF00271DDC /* Main.storyboard */; };
-		71810BFE1C1F45AF00271DDC /* Github_swivl.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 71810BFC1C1F45AF00271DDC /* Github_swivl.xcdatamodeld */; };
-		71810C001C1F45AF00271DDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71810BFF1C1F45AF00271DDC /* Assets.xcassets */; };
 		71810C031C1F45AF00271DDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71810C011C1F45AF00271DDC /* LaunchScreen.storyboard */; };
 		71810C0E1C1F45AF00271DDC /* Github_swivlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71810C0D1C1F45AF00271DDC /* Github_swivlTests.swift */; };
+		71C7E4281C258E5600C97B9C /* GithubRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E4271C258E5600C97B9C /* GithubRouter.swift */; };
+		71C7E42A1C258EFF00C97B9C /* GithubDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E4291C258EFF00C97B9C /* GithubDefinitions.swift */; };
+		71C7E4341C25DF0E00C97B9C /* FRCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E4331C25DF0E00C97B9C /* FRCFactory.swift */; };
+		71C7E4361C25E16800C97B9C /* DataSourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E4351C25E16800C97B9C /* DataSourceFactory.swift */; };
+		71C7E4391C25E62900C97B9C /* FRCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E4381C25E62900C97B9C /* FRCDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +39,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		67BD92FFA8EFE3874DEAE18A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		71519CAC1C25570A006C9658 /* Github_swivl.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Github_swivl.xcdatamodel; sourceTree = "<group>"; };
+		71519CAF1C255711006C9658 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		71519CB21C25573D006C9658 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		71747E331C255D5100C816AD /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		71747E341C255D5100C816AD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		71747E391C2569E500C816AD /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		71747E3B1C256A1100C816AD /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		71747E3E1C256CB400C816AD /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		71747E421C25710500C816AD /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		71810BF21C1F45AE00271DDC /* Github-swivl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github-swivl.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71810BF51C1F45AF00271DDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		71810BF71C1F45AF00271DDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		71810BFA1C1F45AF00271DDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		71810BFD1C1F45AF00271DDC /* Github_swivl.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Github_swivl.xcdatamodel; sourceTree = "<group>"; };
-		71810BFF1C1F45AF00271DDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71810C021C1F45AF00271DDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71810C041C1F45AF00271DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71810C091C1F45AF00271DDC /* Github-swivlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Github-swivlTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71810C0D1C1F45AF00271DDC /* Github_swivlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github_swivlTests.swift; sourceTree = "<group>"; };
 		71810C0F1C1F45AF00271DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71C7E4271C258E5600C97B9C /* GithubRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRouter.swift; sourceTree = "<group>"; };
+		71C7E4291C258EFF00C97B9C /* GithubDefinitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubDefinitions.swift; sourceTree = "<group>"; };
+		71C7E4331C25DF0E00C97B9C /* FRCFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRCFactory.swift; sourceTree = "<group>"; };
+		71C7E4351C25E16800C97B9C /* DataSourceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceFactory.swift; sourceTree = "<group>"; };
+		71C7E4381C25E62900C97B9C /* FRCDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRCDataSource.swift; sourceTree = "<group>"; };
+		79E05A75AF88931542A4AEBF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		988A933D3C97A4298997B72B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45E7E6E06CFFD863CF63C72B /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +85,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2080A87422BEEEE437A863B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67BD92FFA8EFE3874DEAE18A /* Pods.debug.xcconfig */,
+				988A933D3C97A4298997B72B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		71519CAA1C25570A006C9658 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				71747E331C255D5100C816AD /* User+CoreDataProperties.swift */,
+				71747E341C255D5100C816AD /* User.swift */,
+				71519CAB1C25570A006C9658 /* Github_swivl.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		71519CAE1C255711006C9658 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				71519CAF1C255711006C9658 /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		71519CB11C25573D006C9658 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				71519CB21C25573D006C9658 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		71747E371C2569D800C816AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				71747E381C2569D800C816AD /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		71747E381C2569D800C816AD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				71747E391C2569E500C816AD /* UserTableViewCell.swift */,
+				71747E3B1C256A1100C816AD /* BaseTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		71747E3D1C256CA600C816AD /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				71747E3E1C256CB400C816AD /* Loader.swift */,
+				71747E421C25710500C816AD /* RequestManager.swift */,
+				71C7E4271C258E5600C97B9C /* GithubRouter.swift */,
+				71C7E4291C258EFF00C97B9C /* GithubDefinitions.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		71810BE91C1F45AE00271DDC = {
 			isa = PBXGroup;
 			children = (
 				71810BF41C1F45AF00271DDC /* Github-swivl */,
 				71810C0C1C1F45AF00271DDC /* Github-swivlTests */,
 				71810BF31C1F45AE00271DDC /* Products */,
+				2080A87422BEEEE437A863B9 /* Pods */,
+				F6A79B52761804DBDA625565 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,13 +171,17 @@
 		71810BF41C1F45AF00271DDC /* Github-swivl */ = {
 			isa = PBXGroup;
 			children = (
+				71C7E4371C25E61400C97B9C /* DataSources */,
+				71C7E42B1C25995D00C97B9C /* Factories */,
+				71747E3D1C256CA600C816AD /* Networking */,
+				71519CAE1C255711006C9658 /* ViewControllers */,
+				71747E371C2569D800C816AD /* View */,
+				71519CAA1C25570A006C9658 /* Model */,
+				71519CB11C25573D006C9658 /* Resources */,
 				71810BF51C1F45AF00271DDC /* AppDelegate.swift */,
-				71810BF71C1F45AF00271DDC /* ViewController.swift */,
 				71810BF91C1F45AF00271DDC /* Main.storyboard */,
-				71810BFF1C1F45AF00271DDC /* Assets.xcassets */,
 				71810C011C1F45AF00271DDC /* LaunchScreen.storyboard */,
 				71810C041C1F45AF00271DDC /* Info.plist */,
-				71810BFC1C1F45AF00271DDC /* Github_swivl.xcdatamodeld */,
 			);
 			path = "Github-swivl";
 			sourceTree = "<group>";
@@ -99,6 +195,47 @@
 			path = "Github-swivlTests";
 			sourceTree = "<group>";
 		};
+		71C7E42B1C25995D00C97B9C /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				71C7E42D1C25995D00C97B9C /* DataSourceFactories */,
+				71C7E42E1C25995D00C97B9C /* FRCFactories */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		71C7E42D1C25995D00C97B9C /* DataSourceFactories */ = {
+			isa = PBXGroup;
+			children = (
+				71C7E4351C25E16800C97B9C /* DataSourceFactory.swift */,
+			);
+			path = DataSourceFactories;
+			sourceTree = "<group>";
+		};
+		71C7E42E1C25995D00C97B9C /* FRCFactories */ = {
+			isa = PBXGroup;
+			children = (
+				71C7E4331C25DF0E00C97B9C /* FRCFactory.swift */,
+			);
+			path = FRCFactories;
+			sourceTree = "<group>";
+		};
+		71C7E4371C25E61400C97B9C /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				71C7E4381C25E62900C97B9C /* FRCDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		F6A79B52761804DBDA625565 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79E05A75AF88931542A4AEBF /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +243,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71810C121C1F45AF00271DDC /* Build configuration list for PBXNativeTarget "Github-swivl" */;
 			buildPhases = (
+				D927EC94EAE23497DC949AF9 /* Check Pods Manifest.lock */,
 				71810BEE1C1F45AE00271DDC /* Sources */,
 				71810BEF1C1F45AE00271DDC /* Frameworks */,
 				71810BF01C1F45AE00271DDC /* Resources */,
+				3DB5FA570760798BB1D05A5E /* Embed Pods Frameworks */,
+				5E9517A4BD31FD535AE289CC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -181,7 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71810C031C1F45AF00271DDC /* LaunchScreen.storyboard in Resources */,
-				71810C001C1F45AF00271DDC /* Assets.xcassets in Resources */,
+				71519CB31C25573D006C9658 /* Assets.xcassets in Resources */,
 				71810BFB1C1F45AF00271DDC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,14 +335,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3DB5FA570760798BB1D05A5E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E9517A4BD31FD535AE289CC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D927EC94EAE23497DC949AF9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		71810BEE1C1F45AE00271DDC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71810BF81C1F45AF00271DDC /* ViewController.swift in Sources */,
+				71519CB01C255711006C9658 /* MainViewController.swift in Sources */,
+				71519CAD1C25570A006C9658 /* Github_swivl.xcdatamodeld in Sources */,
+				71C7E4391C25E62900C97B9C /* FRCDataSource.swift in Sources */,
+				71747E351C255D5100C816AD /* User+CoreDataProperties.swift in Sources */,
+				71747E361C255D5100C816AD /* User.swift in Sources */,
+				71747E3C1C256A1100C816AD /* BaseTableViewCell.swift in Sources */,
+				71747E3F1C256CB400C816AD /* Loader.swift in Sources */,
+				71C7E42A1C258EFF00C97B9C /* GithubDefinitions.swift in Sources */,
+				71747E431C25710500C816AD /* RequestManager.swift in Sources */,
+				71747E3A1C2569E500C816AD /* UserTableViewCell.swift in Sources */,
+				71C7E4361C25E16800C97B9C /* DataSourceFactory.swift in Sources */,
 				71810BF61C1F45AF00271DDC /* AppDelegate.swift in Sources */,
-				71810BFE1C1F45AF00271DDC /* Github_swivl.xcdatamodeld in Sources */,
+				71C7E4281C258E5600C97B9C /* GithubRouter.swift in Sources */,
+				71C7E4341C25DF0E00C97B9C /* FRCFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,9 +526,12 @@
 		};
 		71810C131C1F45AF00271DDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67BD92FFA8EFE3874DEAE18A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Github-swivl/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nickolay.sheika.Github-swivl";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -338,9 +540,12 @@
 		};
 		71810C141C1F45AF00271DDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 988A933D3C97A4298997B72B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Github-swivl/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nickolay.sheika.Github-swivl";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -390,6 +595,7 @@
 				71810C141C1F45AF00271DDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		71810C151C1F45AF00271DDC /* Build configuration list for PBXNativeTarget "Github-swivlTests" */ = {
 			isa = XCConfigurationList;
@@ -398,16 +604,17 @@
 				71810C171C1F45AF00271DDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		71810BFC1C1F45AF00271DDC /* Github_swivl.xcdatamodeld */ = {
+		71519CAB1C25570A006C9658 /* Github_swivl.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				71810BFD1C1F45AF00271DDC /* Github_swivl.xcdatamodel */,
+				71519CAC1C25570A006C9658 /* Github_swivl.xcdatamodel */,
 			);
-			currentVersion = 71810BFD1C1F45AF00271DDC /* Github_swivl.xcdatamodel */;
+			currentVersion = 71519CAC1C25570A006C9658 /* Github_swivl.xcdatamodel */;
 			path = Github_swivl.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
