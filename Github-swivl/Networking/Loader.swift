@@ -86,10 +86,14 @@ class Loader<T: EKManagedObjectModel> {
             
             do {
                 try self.context.save()
-                completion?(error: nil)
+                dispatch_async(dispatch_get_main_queue(), {
+                    completion?(error: nil)
+                });
             }
             catch {
-                completion?(error: ResponseError.ResponseErrorContextSave)
+                dispatch_async(dispatch_get_main_queue(), {
+                    completion?(error: ResponseError.ResponseErrorContextSave)
+                });
             }
         }
     }
