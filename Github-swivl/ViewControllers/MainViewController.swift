@@ -11,6 +11,7 @@ import UIKit
 import CoreData
 import BNRCoreDataStack
 
+
 class MainViewController: UIViewController {
 
     // MARK: - Outlets
@@ -39,6 +40,20 @@ class MainViewController: UIViewController {
         buildDataSource()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        guard segue.identifier == "ShowPhoto" else {
+            return
+        }
+        
+        guard let button = sender as? UIButton else {
+            return
+        }
+        let point = tableView.convertPoint(button.frame.origin, fromCoordinateSpace: button.superview!)
+        let indexPath = tableView.indexPathForRowAtPoint(point)
+        let model = dataSource.objectAtIndexPath(indexPath!) as! User
+        let photoViewController = segue.destinationViewController as! PhotoViewController
+        photoViewController.photoURL = model.avatarURL
+    }
     
     // MARK: - Private
     
@@ -53,5 +68,3 @@ class MainViewController: UIViewController {
         tableView.reloadData()
     }
 }
-
-

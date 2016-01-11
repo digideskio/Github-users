@@ -19,8 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         do {
-            let rootController = self.window!.rootViewController as! MainViewController
-            rootController.coreDataStack = try CoreDataStack.constructInMemoryStack(withModelName: "Github_swivl")
+            let rootController = self.window!.rootViewController as! UINavigationController
+            let mainController = rootController.viewControllers[0] as! MainViewController
+            mainController.coreDataStack = try CoreDataStack.constructInMemoryStack(withModelName: "Github_swivl")
         } catch {
             print(error)
         }

@@ -25,6 +25,7 @@
 		71C7E4341C25DF0E00C97B9C /* FRCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E4331C25DF0E00C97B9C /* FRCFactory.swift */; };
 		71C7E4361C25E16800C97B9C /* DataSourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E4351C25E16800C97B9C /* DataSourceFactory.swift */; };
 		71C7E4391C25E62900C97B9C /* FRCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E4381C25E62900C97B9C /* FRCDataSource.swift */; };
+		71C7E43B1C25F30A00C97B9C /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E43A1C25F30A00C97B9C /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		71C7E4331C25DF0E00C97B9C /* FRCFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRCFactory.swift; sourceTree = "<group>"; };
 		71C7E4351C25E16800C97B9C /* DataSourceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceFactory.swift; sourceTree = "<group>"; };
 		71C7E4381C25E62900C97B9C /* FRCDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRCDataSource.swift; sourceTree = "<group>"; };
+		71C7E43A1C25F30A00C97B9C /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		79E05A75AF88931542A4AEBF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		988A933D3C97A4298997B72B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				71519CAF1C255711006C9658 /* MainViewController.swift */,
+				71C7E43A1C25F30A00C97B9C /* PhotoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				71810BF61C1F45AF00271DDC /* AppDelegate.swift in Sources */,
 				71C7E4281C258E5600C97B9C /* GithubRouter.swift in Sources */,
 				71C7E4341C25DF0E00C97B9C /* FRCFactory.swift in Sources */,
+				71C7E43B1C25F30A00C97B9C /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
