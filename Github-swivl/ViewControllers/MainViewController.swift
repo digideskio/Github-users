@@ -11,6 +11,7 @@ import UIKit
 import CoreData
 import BNRCoreDataStack
 
+
 class MainViewController: UIViewController {
 
     // MARK: - Outlets
@@ -21,7 +22,7 @@ class MainViewController: UIViewController {
     // MARK: - Variables
     
     var coreDataStack: CoreDataStack!
-    var dataSource: FRCDataSource!
+    var dataSource: FRCDataSource<UserTableViewCell>!
     
     
     // MARK: - Lifecycle
@@ -32,10 +33,26 @@ class MainViewController: UIViewController {
             if error != nil {
                 let alert = UIAlertController(title: "Error", message: error!.message(), preferredStyle: .Alert)
                 self.presentViewController(alert, animated: true, completion: nil)
+                
             }
         }
 
         buildDataSource()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        guard segue.identifier == "ShowPhoto" else {
+            return
+        }
+        
+        guard let button = sender as? UIButton else {
+            return
+        }
+        let point = tableView.convertPoint(button.frame.origin, fromCoordinateSpace: button.superview!)
+        let indexPath = tableView.indexPathForRowAtPoint(point)
+        let model = dataSource.objectAtIndexPath(indexPath!) as! User
+        let photoViewController = segue.destinationViewController as! PhotoViewController
+        photoViewController.photoURL = model.avatarURL
     }
     
     // MARK: - Private
@@ -43,7 +60,6 @@ class MainViewController: UIViewController {
     private func buildDataSource() {
         let factory = DataSourceFactory<User>(
             tableView: tableView,
-            cellReuseIdentifier: UserTableViewCell.reuseIdentifier(),
             context: coreDataStack.mainQueueContext
         )
         dataSource = factory.buildFRCDataSource(WithSortBy: "remoteID", ascending: true)
@@ -52,5 +68,3 @@ class MainViewController: UIViewController {
         tableView.reloadData()
     }
 }
-
-

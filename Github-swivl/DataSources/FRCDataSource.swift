@@ -11,31 +11,43 @@ import UIKit
 import CoreData
 
 protocol CellProtocol {
-    func updateWithModel(model: AnyObject)
+    typealias T
+    
+    static func cellReuseIdentifier() ->  String
+    func updateWithModel(model: T)
+}
+
+extension CellProtocol {
+    static func cellReuseIdentifier() ->  String {
+        return String(self)
+    }
 }
 
 
-class FRCDataSource: NSObject {
+class FRCDataSource<CellType: CellProtocol>: NSObject, UITableViewDataSource, NSFetchedResultsControllerDelegate {
     
     // MARK: - Variables
     
     weak var tableView: UITableView?
     let fetchedResultsController: NSFetchedResultsController
-    let cellReuseIdentifier: String
     
     
     // MARK: - Init
     
-    init(tableView: UITableView?, fetchedResultsController: NSFetchedResultsController, cellReuseIdentifier: String) {
+    init(tableView: UITableView?, fetchedResultsController: NSFetchedResultsController) {
         self.tableView = tableView
         self.fetchedResultsController = fetchedResultsController
-        self.cellReuseIdentifier = cellReuseIdentifier
         super.init()
 
         fetchedResultsController.delegate = self
         fetch()
     }
     
+    // MARK: - Public
+    
+    func objectAtIndexPath(indexPath: NSIndexPath) -> NSManagedObject {
+        return self.fetchedResultsController.objectAtIndexPath(indexPath) as! NSManagedObject
+    }
     
     // MARK: - Private
     
@@ -48,9 +60,8 @@ class FRCDataSource: NSObject {
         }
     }
     
-}
-
-extension FRCDataSource: UITableViewDataSource {
+    // MARK: - UITableViewDataSource
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return fetchedResultsController.sections != nil ? fetchedResultsController.sections!.count : 0
     }
@@ -63,15 +74,17 @@ extension FRCDataSource: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseIdentifier, forIndexPath: indexPath) as! CellProtocol
-        let model = self.fetchedResultsController.objectAtIndexPath(indexPath)
-        cell.updateWithModel(model)
+        let reuseIdentifier = CellType.cellReuseIdentifier()
+        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! CellType
+        
+        if let model = self.fetchedResultsController.objectAtIndexPath(indexPath) as? CellType.T {
+            cell.updateWithModel(model)
+        }
         
         return cell as! UITableViewCell
     }
-}
-
-extension FRCDataSource: NSFetchedResultsControllerDelegate {
+    
+    // MARK: - NSFetchedResultsControllerDelegate
     
     func controllerWillChangeContent(controller: NSFetchedResultsController) {
         tableView?.beginUpdates()
