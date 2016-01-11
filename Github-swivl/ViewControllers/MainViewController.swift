@@ -21,7 +21,7 @@ class MainViewController: UIViewController {
     // MARK: - Variables
     
     var coreDataStack: CoreDataStack!
-    var dataSource: FRCDataSource!
+    var dataSource: FRCDataSource<UserTableViewCell>!
     
     
     // MARK: - Lifecycle
@@ -32,18 +32,19 @@ class MainViewController: UIViewController {
             if error != nil {
                 let alert = UIAlertController(title: "Error", message: error!.message(), preferredStyle: .Alert)
                 self.presentViewController(alert, animated: true, completion: nil)
+                
             }
         }
 
         buildDataSource()
     }
     
+    
     // MARK: - Private
     
     private func buildDataSource() {
         let factory = DataSourceFactory<User>(
             tableView: tableView,
-            cellReuseIdentifier: UserTableViewCell.reuseIdentifier(),
             context: coreDataStack.mainQueueContext
         )
         dataSource = factory.buildFRCDataSource(WithSortBy: "remoteID", ascending: true)

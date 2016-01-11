@@ -16,24 +16,22 @@ class DataSourceFactory<T: EKManagedObjectModel> {
     // MARK: - Variables
     
     let context: NSManagedObjectContext
-    let cellReuseIdentifier: String
     weak var tableView: UITableView?
     
     
     // MARK: - Init
     
-    init(tableView: UITableView?, cellReuseIdentifier:String, context: NSManagedObjectContext) {
+    init(tableView: UITableView?, context: NSManagedObjectContext) {
         self.tableView = tableView
         self.context = context
-        self.cellReuseIdentifier = cellReuseIdentifier
     }
     
     // MARK: - Public
     
-    func buildFRCDataSource(WithSortBy sortBy: String, ascending: Bool) -> FRCDataSource {
+    func buildFRCDataSource<CellType: CellProtocol>(WithSortBy sortBy: String, ascending: Bool) -> FRCDataSource<CellType> {
         let frcFactory = FRCFactory<T>(context: context)
         let frc = frcFactory.buildFRC(WithSortBy: sortBy, ascending: ascending)
         
-        return FRCDataSource(tableView: tableView, fetchedResultsController: frc, cellReuseIdentifier: cellReuseIdentifier)
+        return FRCDataSource(tableView: tableView, fetchedResultsController: frc)
     }
 }

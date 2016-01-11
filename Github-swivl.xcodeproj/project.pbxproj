@@ -14,7 +14,6 @@
 		71747E351C255D5100C816AD /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71747E331C255D5100C816AD /* User+CoreDataProperties.swift */; };
 		71747E361C255D5100C816AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71747E341C255D5100C816AD /* User.swift */; };
 		71747E3A1C2569E500C816AD /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71747E391C2569E500C816AD /* UserTableViewCell.swift */; };
-		71747E3C1C256A1100C816AD /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71747E3B1C256A1100C816AD /* BaseTableViewCell.swift */; };
 		71747E3F1C256CB400C816AD /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71747E3E1C256CB400C816AD /* Loader.swift */; };
 		71747E431C25710500C816AD /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71747E421C25710500C816AD /* RequestManager.swift */; };
 		71810BF61C1F45AF00271DDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71810BF51C1F45AF00271DDC /* AppDelegate.swift */; };
@@ -46,7 +45,6 @@
 		71747E331C255D5100C816AD /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		71747E341C255D5100C816AD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		71747E391C2569E500C816AD /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
-		71747E3B1C256A1100C816AD /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		71747E3E1C256CB400C816AD /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		71747E421C25710500C816AD /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		71810BF21C1F45AE00271DDC /* Github-swivl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github-swivl.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				71747E391C2569E500C816AD /* UserTableViewCell.swift */,
-				71747E3B1C256A1100C816AD /* BaseTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -393,7 +390,6 @@
 				71C7E4391C25E62900C97B9C /* FRCDataSource.swift in Sources */,
 				71747E351C255D5100C816AD /* User+CoreDataProperties.swift in Sources */,
 				71747E361C255D5100C816AD /* User.swift in Sources */,
-				71747E3C1C256A1100C816AD /* BaseTableViewCell.swift in Sources */,
 				71747E3F1C256CB400C816AD /* Loader.swift in Sources */,
 				71C7E42A1C258EFF00C97B9C /* GithubDefinitions.swift in Sources */,
 				71747E431C25710500C816AD /* RequestManager.swift in Sources */,
