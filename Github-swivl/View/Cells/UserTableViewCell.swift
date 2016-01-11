@@ -10,16 +10,14 @@ import Foundation
 import UIKit
 import Haneke
 
-class UserTableViewCell: BaseTableViewCell {
+class UserTableViewCell: UITableViewCell, CellProtocol {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userURLLabel: UILabel!
     @IBOutlet weak var userAvatarImageView: UIImageView!
     
-    override func updateWithModel(model: AnyObject) {
-        guard let model = model as? User else {
-            return
-        }
-        
+    typealias T = User
+    
+    func updateWithModel(model: T) {
         userNameLabel.text = model.login
         userURLLabel.text = model.htmlURL
         

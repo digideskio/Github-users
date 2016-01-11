@@ -46,6 +46,7 @@ class Loader<T: EKManagedObjectModel> {
     // MARK: - Public
     
     func load(page page: Int, count: Int, completion: LoaderCompletionHandler?) {
+        
         guard let endPoint = GithubRouter.endPoint(T) else {
             NSException(name:NSInternalInconsistencyException, reason:"Cannot find endpoint for model!", userInfo:nil).raise()
             return
@@ -86,10 +87,14 @@ class Loader<T: EKManagedObjectModel> {
             
             do {
                 try self.context.save()
-                completion?(error: nil)
+                dispatch_async(dispatch_get_main_queue(), {
+                    completion?(error: nil)
+                });
             }
             catch {
-                completion?(error: ResponseError.ResponseErrorContextSave)
+                dispatch_async(dispatch_get_main_queue(), {
+                    completion?(error: ResponseError.ResponseErrorContextSave)
+                });
             }
         }
     }
